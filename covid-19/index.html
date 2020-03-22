@@ -11,18 +11,19 @@ We all want to know answers to questions like: "how many people are going to die
 Definitive answers are not to be had of course, but thanks to the excellent articles by Tomas Pueyo (<a href="https://medium.com/@tomaspueyo/coronavirus-act-today-or-people-will-die-f4d3d9cd99ca">Why You Must Act Now</a>, and <a href=" https://medium.com/@tomaspueyo/coronavirus-the-hammer-and-the-dance-be9337092b56">The Hammer and the Dance</a>) and an epidemic simulator I found via the first of those (<a href="http://gabgoh.github.io/COVID/">http://gabgoh.github.io/COVID/</a>), we can make some very approximate predictions for Alberta.
 <p>
 I plugged in some simple assumptions: about 4M population, the virus has been circulating since February 1, initial reproduction factor is 2.2, reproduction after social distancing was brought in is 0.75, and social distancing started on March 15 (day 43) and I checked that the graphs generated concur roughly with the reported cases in Alberta.  Here is the graph of new infections per day.
-
+</p>
 <img src="g1.png" alt="graph from model of infections with R=0.75" width="80%">
 
 <p>
 Note that the actual infections per day do not correspond directly to the numbers of infections reported by Alberta Health (<a href="https://www.alberta.ca/covid-19-alberta-data.aspx#toc-1">Case counts</a>). We don't see an infection during it's incubation period (5-14 days) and it may well not be reported for some days after that. Add to that that testing was just being ramped up for the first few days and that many people may be mildly sick but because they have voluntarily self-isolated themselves, we have not been testing them as it wouldn't change their treatment. The result is that reported cases lag actual cases by 9-10 days and may appear to exceed actual cases somewhat as well. Here is a comparison of graphs of cases in Hubei by date of diagnosis (reporting, in orange) and by date of onset of symptoms (blue). I am taking the latter as an approximation to numbers of actual cases.
-
+</p>
 <img src="g2.png" alt="graph of data from Hubei" width="80%">
 
 <p>
 I am ignoring the excess and assuming that if there were, say, 49 new cases reported on March 21 then there were 49 actual cases on March 11 (aka day 39). I have moved the start date of my model to make the numbers approximately fit the progression so far in Alberta.
 <p>
 The epidemic calculator will also show us the numbers of hospitalizations and deaths:
+</p>
 
 <img src="g3.png" alt="graph from model with hospitalizations and deaths" width="80%">
 
@@ -34,12 +35,13 @@ The other thing we would like to know is the risk of us personally getting infec
 Once again, my estimates here are extremely rough. The model is very sensitive to exactly how far the epidemic had progressed when distancing measures were brought in. There is also the critical but so far entirely unknown value of R.  R is the reproduction rate - how many people on average will become infected from each infected carrier. I chose 0.75 because I read that for Wuhan, which has now defeated the virus (for the time being), scientists calculated R for their very severe distancing regime as 0.34. I am hoping that with our less severe restrictions we can still achieve an R as small as twice that of Wuhan.
 <p>
 Suppose that we achieve an R of only 0.95 instead of 0.75. The number of infections per day will still rise to the same peak of about 110 per day. The number of hospitalizations will go up to about 180 instead of 120, but the epidemic will last considerably longer and the number of deaths will rise from 30 to more than 75. The cumulative number of infections rises from 1500 to about 4000.
+</p>
 
 <img src="g4.png" alt="graph from model of infections with R=0.95" width="80%">
 
 <p>
 Suppose we don't achieve an R value below 1. Let's say we bring it down to only 1.05 instead. In that case, the epidemic is not stopped at all. After 220 days the number of new cases per day is still rising and the virus will, in time, inexorably infect every susceptible in the population. This could take a number of years as we are still getting only 400 infections per day after 6 months. Nevertheless it is not a very satisfactory conclusion and if it turns out to be the real situation we can expect the powers that be to bring in even more draconian distancing measures.
-
+</p>
 <img src="g5.png" alt="graph from model of infections with R=1.06" width="80%">
 
 <p>
