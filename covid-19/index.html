@@ -13,22 +13,39 @@ Definitive answers are not to be had of course, but thanks to the excellent arti
 </p>
 <h4>What does social distancing do?</h4>
 <p>
-I plugged in some simple assumptions: about 4M population, the virus has been circulating since February 1, initial reproduction factor is 2.2, reproduction after social distancing was brought in is 0.75, and social distancing started on March 15 (day 43) and I checked that the graphs generated concur roughly with the reported cases in Alberta.  Here is the graph of new infections per day.
+I plugged in some simple assumptions: about 4M population, the virus has been circulating since February 1, initial reproduction factor is 2.2, reproduction after social distancing was brought in is 0.75, and social distancing started on March 15 (day 43) and I checked that the graphs generated concur roughly with the reported cases in Alberta.  
+The reproduction factor after distancing and the days since epidemic onset that distancing was begun are the critical factors. The reproduction factor is the average number of other people directly infected by an infected person.
+Here is the graph of new infections per day.
 </p>
 <center><img src="g1.png" alt="graph from model of infections with R=0.75" width="70%"></center>
 <p>
 This graph shows the actual number of infections in the community under the assumptions of the model.
-Notice that actual infections start to drop immediately.
+The vertical black line labelled <i>Intervention</i> marks the day on which social distancing begins.
+Notice that actual infections start to drop within just two days.
 This will happen regardless of any other assumptions provided only that we can bring the reproduction factor below 1.0.
 </p>
 <h4>When will we see infections starting to drop?</h4>
 <p>
-Note that the actual infections per day do not correspond directly to the numbers of infections reported by Alberta Health (<a href="https://www.alberta.ca/covid-19-alberta-data.aspx#toc-1">Case counts</a>). We don't see an infection during it's incubation period (5-14 days) and it may well not be reported for some days after that. Add to that that testing was just being ramped up for the first few days and that many people may be mildly sick but because they have voluntarily self-isolated themselves, we have not been testing them as it wouldn't change their treatment. The result is that reported cases lag actual cases by 9-10 days and may appear to exceed actual cases somewhat as well. Here is a comparison of graphs of cases in Hubei by date of diagnosis (reporting, in orange) and by date of onset of symptoms (blue). I am taking the latter as an approximation to numbers of actual cases.
+We can't see actual infections; we only get to see infections when they are reported and tested.
+So the actual infections per day do not correspond directly to the numbers of infections reported by Alberta Health (<a href="https://www.alberta.ca/covid-19-alberta-data.aspx#toc-1">Case counts</a>).
+We don't see an infection during it's incubation period (5-14 days) and it may well not be reported for some days after that. Add to that that testing was just being ramped up for the first few days and that many people may be mildly sick but because they have voluntarily self-isolated themselves, we have not been testing them as it wouldn't change their treatment. 
 </p>
-<img src="g2.png" alt="graph of data from Hubei" width="70%">
-
 <p>
-I am ignoring the excess and assuming that if there were, say, 49 new cases reported on March 21 then there were 49 actual cases on March 11 (aka day 39). I have moved the start date of my model to make the numbers approximately fit the progression so far in Alberta.
+The result is that reported cases lag actual cases by a number of days and may appear to exceed actual cases somewhat as well. Here is a comparison of graphs of cases in Hubei by date of diagnosis (reporting, in orange) and by date of onset of symptoms (blue). I am taking the latter as an approximation to numbers of actual cases.
+</p>
+<center><img src="g2.png" alt="graph of data from Hubei" width="70%"></center>
+<p>
+I am ignoring the excess and assuming that if there were, say, 49 new cases reported on March 21 then there were 49 actual cases on March 11 (aka day 39). I moved the start date of my model to make the numbers approximately fit the progression so far in Alberta.
+</p>
+<p>
+The lag between the two peaks in the Hubei graph is about 9 days.
+Add to that that infections generally do not show any symptoms for 5 days,
+and that actual infections will not drop till two days after distancing measures are introduced.
+The result is that we should only see reported infections beginning to drop 16 days after the intervention.
+The intervention took place in Alberta on March 15.
+If our measures have been sufficiently strict, we should see cases reported begin to drop by the end of March.
+</p>
+<h4>How many people are going to die?</h4>
 <p>
 The epidemic calculator will also show us the numbers of hospitalizations and deaths:
 </p>
