@@ -1,2 +1,43 @@
-test test test
+A New Hope - My attempt at amateur epidemiology.
 
+We all want to know answers to questions like: "how many people are going to die", "how long will we be under emergency measures", "am I going to get the dreaded lurgi", and "what happens next?".
+
+Definitive answers are not to be had of course, but thanks to the excellent articles by Tomas Pueyo ("Why You Must Act Now" https://medium.com/@tomaspueyo/coronavirus-act-today-or-people-will-die-f4d3d9cd99ca, and "The Hammer and the Dance" https://medium.com/@tomaspueyo/coronavirus-the-hammer-and-the-dance-be9337092b56) and an epidemic simulator I found via the first of those (http://gabgoh.github.io/COVID/), we can make some very approximate predictions for Alberta.
+
+I plugged in some simple assumptions: about 4M population, the virus has been circulating since Feb 1, initial reproduction factor is 2.2, reproduction after social distancing was brought in is 0.75, and social distancing started on March 15 (day 43) and I checked that the graphs generated concur roughly with the reported cases in Alberta.  Here is the graph of new infections per day.
+
+<g1>
+
+Note that the actual infections per day do not correspond directly to the numbers of infections reported by Alberta Health (https://www.alberta.ca/covid-19-alberta-data.aspx#toc-1). We don't see an infection during it's incubation period (5-14 days) and it may well not be reported for some days after that. Add to that that testing was just being ramped up for the first few days and that many people may be mildly sick but because they have voluntarily self-isolated themselves, we have not been testing them as it wouldn't change their treatment. The result is that reported cases lag actual cases by 9-10 days and may appear to exceed actual cases somewhat as well. Here is a comparison of graphs of cases in Hubei by date of diagnosis (reporting, in orange) and by date of onset of symptoms (blue). I am taking the latter as an approximation to numbers of actual cases.
+
+<g2 from medium1>
+
+I am ignoring the excess and assuming that if there were, say, 49 new cases reported on Mar 21 then there were 49 actual cases on Mar 11 (aka day 39). I have moved the start date of my model to make the numbers approximately fit the progression so far in Alberta.
+
+The epidemic calculator will also show us the numbers of hospitalizations and deaths:
+
+<g3>
+
+Note that these are all daily numbers showing people in a particular condition on one day, not cumulative numbers. However the numbers of deaths are cumulative because people stay dead once they die. We can get cumulative numbers just by adding up the numbers from the beginning. I haven't gone to that trouble as I want to get this note out there as soon as I can. Besides the two things that really matter are first, the number of deaths we have to anticipate, and secondly, the peak number of people hospitalised at any time. According to the model, if I've made the right assumptions, Alberta can expect about 30 deaths over the course of the epidemic and the peak in hospitalisations is about 120. That seems manageable and the low number is attributable to the speed with which our governments have reacted.
+
+The other thing we would like to know is the risk of us personally getting infected. For this we need to know the cumulative number of cases and, in the absence of any information about whether we are, say, more or less likely to interact with people who travel, we can just divide that by the size of the total population. As I said I haven't attempted to derive cumulative graphs from the model, but estimating using the 2% death rate built into the model, the total number of cases should be around 1500, which means our raw probability of getting infected is just 0.04%.
+
+Once again, my estimates here are extremely rough. The model is very sensitive to exactly how far the epidemic had progressed when distancing measures were brought in. There is also the critical but so far entirely unknown value of R.  R is the reproduction rate - how many people on average will become infected from each infected carrier. I chose 0.75 because I read that for Wuhan, which has now defeated the virus (for the time being), scientists calculated R for their very severe distancing regime as 0.34. I am hoping that with our less severe restrictions we can still achieve an R as small as twice that of Wuhan.
+
+Suppose that we achieve an R of only 0.95 instead of 0.75. The number of infections per day will still rise to the same peak of about 110 per day. The number of hospitalizations will go up to about 180 instead of 120, but the epidemic will last considerably longer and the number of deaths will rise from 30 to more than 75. The cumulative number of infections rises from 1500 to about 4000.
+
+<g4>
+
+Suppose we don't achieve an R value below 1. Let's say we bring it down to only 1.05 instead. In that case, the epidemic is not stopped at all. After 220 days the number of new cases per day is still rising and the virus will, in time, inexorably infect every susceptible in the population. This could take a number of years as we are still getting only 400 infections per day after 6 months. Nevertheless it is not a very satisfactory conclusion and if it turns out to be the real situation we can expect the powers that be to bring in even more draconian distancing measures.
+
+<g5>
+
+The next thing to know is when will we find out whether our social distancing measures are working. If we were successful in reducing R below 1.0, the number of infections per day should peak about 4-6 days after the distancing measures were introduced. The number of observed new cases will peak about 10 days after that. If we take March 15 as the date we introduced social distancing, that means we should start to see a drop in new cases by the end of March. In fact, we introduced some measures even earlier than March 15 (selective isolations, no large gatherings) so we might see a drop starting even sooner. The drop in reported cases today (March 21) was encouraging, but of course we should not try to extrapolate from just a single data point.
+
+How fast the drop proceeds will tell us quickly how low we have managed to reduce R. We should know that well enough within three days after the peak.  R, in turn, tells us how long the epidemic will last before petering out. In the 0.75 case, we should see the number of new actual daily infections go down to 5 after about 3 months and to 1 after a further 3 months.
+
+Our model is somewhat pessimistic in at least one respect: we have assumed all reported cases are community transmissions. In fact, many of the new cases have been imported directly from outside Alberta. The first reported community transmission was March 15, so perhaps actual community transmission didn't get started till much later than the February 1 date we assumed. In that case we might be in a much better position. I'll leave that determination to people with access to more sophisticated modelling software.
+
+How long does the lockdown have to last? The R=0.75 model tells us the epidemic peters out after 6 months. In fact, the more severely we restrict contact now, the sooner we can relax the restrictions. We will have to maintain vigilance though, and if new cases escape into the community after we introduce relaxations then we will have to reintroduce restrictions in a hurry. Above all, travel restrictions aren't going to go away until all countries have brought the epidemic under control or have had it burn out. Isolation for returning travellers will also be with us for a long time. In South Korea, the first 30 cases imported from China were traced and contained. Case 31, however, was missed and gave rise indirectly to more than 2000 consequent infections (https://graphics.reuters.com/CHINA-HEALTH-SOUTHKOREA-CLUSTERS/0100B5G33SB/index.html).
+
+So are we going to be stuck with repeated distancing episodes forever? I don't think so. We have teams of scientists investigating remediation all over the world. Every anti-viral ever developed is being tested. Strides are being made in vaccine development. Even a poor vaccine could be enough to lower R in a population below 1. Developments in fast and cheaper testing can also be effective in slowing the epidemic and keeping it under control as in South Korea, Taiwan, Singapore and now China. Finally work is being done on detecting antibodies to the new Coronavirus. That will enable us to assay a population and find the true rate of immunity and hence the susceptibility to another outbreak. Any one of these measures successfully implemented could enable us to say goodbye to this scourge.
