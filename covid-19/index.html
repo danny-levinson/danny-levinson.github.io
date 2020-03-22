@@ -3,9 +3,10 @@
 <title>A New Hope - my attempt at amateur epidemiology</title>
 </head>
 <body>
-<h1>A New Hope - my attempt at amateur epidemiology</h1>
-<h2><i>Danny Levinson</i></h2>
-<h3>2020-March-22</h2>
+<h1>A New Hope</h1>
+<h2>My attempt at amateur epidemiology</h2>
+<h3><i>Danny Levinson</i></h3>
+<h3>2020-March-22</h3>
 <p>
 We all want to know answers to questions like: "how many people are going to die", "how long will we be under emergency measures", "am I going to get the dreaded lurgi", and "what happens next?".
 <p>
@@ -17,7 +18,7 @@ I plugged in some simple assumptions: about 4M population, the virus has been ci
 The reproduction factor after distancing and the days since epidemic onset that distancing was begun are the critical factors. The reproduction factor is the average number of other people directly infected by an infected person.
 Here is the graph of new infections per day.
 </p>
-<center><img src="g1.png" alt="graph from model of infections with R=0.75" width="70%"></center>
+<center><img src="g1.png" alt="graph from model of infections with R=0.75" width="75%"></center>
 <p>
 This graph shows the actual number of infections in the community under the assumptions of the model.
 The vertical black line labelled <i>Intervention</i> marks the day on which social distancing begins.
@@ -33,7 +34,7 @@ We don't see an infection during it's incubation period (5-14 days) and it may w
 <p>
 The result is that reported cases lag actual cases by a number of days and may appear to exceed actual cases somewhat as well. Here is a comparison of graphs of cases in Hubei by date of diagnosis (reporting, in orange) and by date of onset of symptoms (blue). I am taking the latter as an approximation to numbers of actual cases.
 </p>
-<center><img src="g2.png" alt="graph of data from Hubei" width="70%"></center>
+<center><img src="g2.png" alt="graph of data from Hubei" width="75%"></center>
 <p>
 I am ignoring the excess and assuming that if there were, say, 49 new cases reported on March 21 then there were 49 actual cases on March 11 (aka day 39). I moved the start date of my model to make the numbers approximately fit the progression so far in Alberta.
 </p>
@@ -49,9 +50,7 @@ If our measures have been sufficiently strict, we should see cases reported begi
 <p>
 The epidemic calculator will also show us the numbers of hospitalizations and deaths:
 </p>
-
-<img src="g3.png" alt="graph from model with hospitalizations and deaths" width="70%">
-
+<center><img src="g3.png" alt="graph from model with hospitalizations and deaths" width="75%"></center>
 <p>
 Note that these are all daily numbers showing people in a particular condition on one day, not cumulative numbers. However the numbers of deaths are cumulative because people stay dead once they die. We can get cumulative numbers just by adding up the numbers from the beginning. I haven't gone to that trouble as I want to get this note out there as soon as I can. Besides the two things that really matter are first, the number of deaths we have to anticipate, and secondly, the peak number of people hospitalised at any time. According to the model, if I've made the right assumptions, Alberta can expect about 30 deaths over the course of the epidemic and the peak in hospitalisations is about 120. That seems manageable and the low number is attributable to the speed with which our governments have reacted.
 <p>
